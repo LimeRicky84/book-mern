@@ -11,6 +11,13 @@ const resolvers = {
             }
             throw new AuthenticationError('Not logged in')
         },
+        me: async (parent, context) => {
+            if (context.user) {
+              return User.findOne({ _id: context.user._id }).populate('books');
+            }
+            throw new AuthenticationError('You need to be logged in!');
+          },
+      
     },
     Mutation: {
         login: async (parent, { email, password }) => {
@@ -30,7 +37,7 @@ const resolvers = {
       
             return { token, user };
         },
-        
+
         addUser: async (parent, args) => {
             const user = await User.create(args);
             const token = signToken(user);
