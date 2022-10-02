@@ -18,6 +18,6 @@ Live Page:
 
 ## Screenshot
 
-![img](./assets/book%20mern1.jpg)
+![img](https://github.com/LimeRicky84/book-mern/blob/main/assets/book%20mern1.jpg)
 
-![img](./assets/book%20mern2.jpg)
+![img](https://github.com/LimeRicky84/book-mern/blob/main/assets/book%20mern2.jpg)
